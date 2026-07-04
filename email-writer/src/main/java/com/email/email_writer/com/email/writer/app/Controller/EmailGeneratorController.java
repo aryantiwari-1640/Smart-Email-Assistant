@@ -1,4 +1,4 @@
-package com.email.email_writer.com.email.writer.app;
+package com.email.email_writer.com.email.writer.app.Controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.email.email_writer.com.email.writer.app.dto.EmailRequest;
+import com.email.email_writer.com.email.writer.app.service.EmailGeneratorService;
 
 import lombok.AllArgsConstructor;
 
