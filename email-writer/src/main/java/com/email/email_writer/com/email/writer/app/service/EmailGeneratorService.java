@@ -1,5 +1,6 @@
 package com.email.email_writer.com.email.writer.app.service;
 
+import java.time.Duration;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -42,6 +43,7 @@ public class EmailGeneratorService {
                         .bodyValue(requestBody)
                         .retrieve()
                         .bodyToMono(String.class)
+                        .timeout(Duration.ofSeconds(10))
                         .block();
         
         return extractResponseContent(response);
