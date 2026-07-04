@@ -18,7 +18,6 @@ public class GoogleAuthService {
     private String googleClientId;
 
     public GoogleIdToken.Payload verify(String idTokenString) throws Exception {
-        System.out.println("Backend expects audience: " + googleClientId);
         GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(
                 new NetHttpTransport(), GsonFactory.getDefaultInstance())
                 .setAudience(Collections.singletonList(googleClientId))
