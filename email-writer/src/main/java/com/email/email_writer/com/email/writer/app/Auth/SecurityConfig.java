@@ -42,7 +42,7 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of(
         "http://localhost:5173",              
-        "https:https://smart-email-assistant-9hs2o5fm1-aryantiwari1640-3686s-projects.vercel.app"   
+        "https://smart-email-assistant-9hs2o5fm1-aryantiwari1640-3686s-projects.vercel.app"   
     ));
         config.setAllowedMethods(List.of("GET", "POST", "OPTIONS"));
         config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
