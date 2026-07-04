@@ -65,6 +65,12 @@ function App() {
         return
       }
 
+      if (response.status === 429) {
+        const data = await response.json();
+        setError(data.error || 'Too many requests — please wait a moment.');
+        return;
+      }
+
       if (!response.ok) {
         throw new Error(`Server responded with ${response.status}`)
       }
